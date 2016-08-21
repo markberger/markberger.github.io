@@ -1,0 +1,29 @@
+title: Mark J. Berger
+description: description here
+
+url: http://markberger.github.io
+baseurl: ""
+paginate_path: "blog/page:num/"
+permalink: /:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+gems: [jekyll-paginate, jekyll-paginate-category]
+paginate: 5
+category_dir: "blog"
+category_layout: "index.html"
+
+navigation:
+ - title: Homepage
+   url: /index.html
+ - title: Blog
+   url: /blog
+
+social:
+   github: markberger
+   email: mjberger@cs.stanford.edu
+
+google_analytics: "UA-43617533-1"
