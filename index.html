@@ -1,0 +1,123 @@
+---
+title: Mark J. Berger
+---
+
+<html>
+    <head>
+        <title>Mark J. Berger</title>
+
+        <link href="{{ "/assets/css/bootstrap.min.css" | prepend: site.baseurl }}" rel='stylesheet'>
+        <link href="{{ "/assets/css/homepage.css" | prepend: site.baseurl }}" rel='stylesheet'>
+        <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900,100italic,100,300,300italic,400italic,500italic,900italic,700italic' rel='stylesheet' type='text/css'>
+        <script src="https://use.fontawesome.com/490eb1ed9f.js"></script>
+        {% if site.google_analytics %} {% include google_analytics.html %} {% endif %}
+    </head>
+    <body>
+        <div id='header' class ='bg'>
+            <div id='header-inner'>
+                <img src="{{ "/assets/img/me.jpg" | prepend: site.baseurl }}" id='img-me' />
+                <div class='header-text'>
+                    <div class='header-text-name'>
+                        Mark J. Berger
+                    </div>
+                    <div class='header-text-email'>
+                        mjberger at cs dot stanford dot edu
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+        <div class='container'>
+            <div class='col-xs-12'>
+                <div class='row about'>
+                    <p>
+                        I am a Masters student in the Computer Science department at Stanford University,
+                        as well as a research assistant in the <a href='http://bejerano.stanford.edu/'>Bejerano Lab</a>.
+                        My interests include a variety of topics that lie within the intersection of
+                        computer science, biology, and medicine, such as rare genetic variation,
+                        the heritability of complex disease, and regulatory genomics.
+                    </p>
+                    <p>
+                        In 2016, I received a B.S. in Computer Science, with honors, from Stanford University.
+                        Before my work in genomics, I worked as a production assistant at Four Directions
+                        Productions. I also worked as a software engineer for the Python Software
+                        Foundation, Yahoo! Research - Latin America, and Facebook.
+                    </p>
+                </div>
+
+                <div class='row'>
+                    <hr>
+                </div>
+
+                <div class='row'>
+                    <h1>Publications</h1>
+                </div>
+
+                <div class='row'>
+                    <div class='col-xs-4'>
+                        <img src="{{ "/assets/img/mcap.png" | prepend: site.baseurl }}" class='paper-image'> 
+                    </div>
+                    <div class='col-xs-8'>
+                        <div class='paper-title'>
+                            M-CAP eliminates majority of variants of uncertain significance in clinical
+                            exomes at 95% sensitivity
+                        </div>
+                        <div class='paper-authors'>
+                            Karthik A. Jagadeesh*, Aaron M. Wenger*, Mark J. Berger, Harendra Guturu,
+                            Peter D. Stenson, David N. Cooper, Jonathan A. Bernstein, Gill Bejerano
+                        </div>
+                        <div>
+                            To appear in Nature Genetics
+                        </div>
+                    </div>
+                </div>
+
+                <div class='row'>
+                    <hr>
+                </div>
+
+                <div class='row'>
+                    <h1>Research Experience</h1>
+                </div>
+
+                <div class='row'>
+                    <div class='col-xs-4'>
+                        <img src="{{ "/assets/img/curtis.jpg" | prepend: site.baseurl }}" class='paper-image'>
+                    </div>
+                    <div class='col-xs-8'>
+                        <div class='paper-title'>
+                            Curtis Lab, April 2016 - September 2016
+                        </div>
+                        <br/>
+                        <p>
+                            In the Curtis Lab, I studied a subtype of breast cancer using next-generation
+                            sequencing technologies. This included a wide variety of methods, including
+                            whole-genome sequencing, copy number assays, and RNA-seq.
+                        </p>
+                    </div>
+                </div>
+
+                <div class='row'>
+                    <div class='col-xs-4'>
+                        <img src="{{ "/assets/img/bejerano.png" | prepend: site.baseurl }}" class='paper-image'>
+                    </div>
+                    <div class='col-xs-8'>
+                        <div class='paper-title'>
+                            Bejerano Lab, April 2015 - June 2016
+                        </div>
+                        <br/>
+                        <p>
+                            In the Bejerano Lab, I worked on tools which help research scientists and clinical geneticists
+                            diagnose patients with rare genetic diseases. Oftentimes, doctors cannot properly diagnose
+                            a child with rare genetic defects. Therefore, the doctor will sequence the protein-coding portion
+                            of the child's DNA to see if the patient harbors any known disease-causing mutations.
+                            If the child does not carry a known disease-causing mutation, the clinician must examine
+                            a list of 300 to 500 variants which might be causing the disease. During my time in the
+                            Bejerano Lab, I worked on tools which help to reduce this list of uncertain variants.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
