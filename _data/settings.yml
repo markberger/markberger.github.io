@@ -1,0 +1,24 @@
+title:  Mark J. Berger
+tagline:  
+
+# Authors documented under _data
+
+# Change to true for Disqus comments
+disqus:
+  comments: false
+  disqus_shortname: 'https-lenpaul-github-io-lagrange'
+
+google-ID: 'UA-43617533-1'
+
+menu:
+- {name: 'About', path: 'menu', url: 'about'}
+- {name: 'Blog', path: 'menu', url: 'blog'}
+- {name: 'Publications', url: "scholar.google.com/citations?user=0P0fVwQAAAAJ"}
+- {name: 'Contact', path: 'menu', url: 'contact'}
+
+# Available social icons are powered by Font Awesome, so you can use any icon that they offer
+social:
+- {icon: 'github', link: 'https://www.github.com/markberger'}
+- {icon: 'twitter', link: 'https://twitter.com/mjberger_'}
+- {icon: 'linkedin', link: 'https://www.linkedin.com/in/markjberger/'}
+- {icon: 'rss-square', link: 'feed.xml'}

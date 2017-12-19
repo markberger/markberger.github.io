@@ -1,172 +1,47 @@
 ---
-title: Mark J. Berger
+layout: default
+title: Home
 ---
 
-<html>
-    <head>
-        <title>Mark J. Berger</title>
+<div>
+    <p>
+        I'm a PhD student interested in biology, computer science, and statistics.
+        Below are my latest blog posts. 
+    </p>
+</div>
 
-        <link href="{{ "/assets/css/bootstrap.min.css" | prepend: site.baseurl }}" rel='stylesheet'>
-        <link href="{{ "/assets/css/homepage.css" | prepend: site.baseurl }}" rel='stylesheet'>
-        <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900,100italic,100,300,300italic,400italic,500italic,900italic,700italic' rel='stylesheet' type='text/css'>
-        {% if site.google_analytics %} {% include google_analytics.html %} {% endif %}
-    </head>
-    <body>
-        <div id='header' class ='bg'>
-            <div id='header-inner'>
-                <img src="{{ "/assets/img/me.jpg" | prepend: site.baseurl }}" id='img-me' />
-                <div class='header-text'>
-                    <div class='header-text-name'>
-                        Mark J. Berger
-                    </div>
-                    <div class='header-text-email'>
-                        mjberger at cs dot stanford dot edu
-                    </div>
-                </div> 
-            </div>
-        </div>
+<br/>
 
-        <div class='container'>
-            <div class='col-xs-12'>
-                <div class='row about'>
-                    <p>
-                        I am a PhD candidate in the Computer Science department at Stanford University.
-                        My interests include a wide variety of topics at the intersection of
-                        computer science, biology, and medicine, such as rare genetic variation,
-                        the heritability of complex traits, and regulatory genomics.
-                    </p>
-                    <p>
-                        In 2016, I received a B.S. in Computer Science, with honors, from Stanford University.
-                        Before my work in genomics, I worked as a production assistant at Four Directions
-                        Productions. I also worked as a software engineer for the Python Software
-                        Foundation, Yahoo! Research - Latin America, and Facebook.
-                    </p>
-                </div>
+{% for post in paginator.posts %}
 
-                <div class='row'>
-                    <hr>
-                </div>
+<div class="posts">
+  <h1>
+    <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
+  </h1>
+  {% if post.image %}
+  <div class="thumbnail-container">
+    <a href="{{ site.github.url }}{{ post.url }}"><img src="{{ site.github.url }}/assets/img/{{ post.image }}"></a>
+  </div>
+  {% endif %}
+  <p>
+    {{ post.content | strip_html | truncate: 350 }} <a href="{{ site.github.url }}{{ post.url }}">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span>
+  </p>
+</div>
+{% endfor %}
 
-                <div class='row'>
-                    <h1>Publications</h1>
-                </div>
-
-                <!-- bsErosion paper-->
-                <div class='row'>
-                    <div class='col-xs-4'>
-                        <img src="{{ "/assets/img/bsErosion.jpg" | prepend: site.baseurl }}" class='paper-image'>
-                    </div>
-                    <div class='col-xs-8'>
-                        <div class='paper-title'>
-                            Independent erosion of conserved transcription factor binding sites points to shared hindlimb, vision, and scrotum loss in different mammals
-                        </div>
-                        <br/>
-                        <div>
-                            <b>Mark J. Berger</b>, Aaron M. Wenger, Harendra Guturu, Gill Bejerano
-                        </div>
-                        <div>
-                            <i>bioRxiv</i>
-                        </div>
-                        <div>
-                            <a href="https://www.biorxiv.org/content/biorxiv/early/2017/10/03/197756.full.pdf">[pdf]</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Cormorants paper-->
-                <div class='row'>
-                    <div class='col-xs-4'>
-                        <img src="{{ "/assets/img/cormorants.jpg" | prepend: site.baseurl }}" class='paper-image'>
-                    </div>
-                    <div class='col-xs-8'>
-                        <div class='paper-title'>
-                            Comment on "A genetic signature of the evolution of loss of flight in the Galapagos cormorant"
-                        </div>
-                        <br/>
-                        <div>
-                            <b>Mark J. Berger</b>, Gill Bejerano
-                        </div>
-                        <div>
-                            <i>bioRxiv</i>
-                        </div>
-                        <div>
-                            <a href="http://www.biorxiv.org/content/biorxiv/early/2017/09/08/181826.full.pdf">[pdf]</a>
-                        </div>
-                    </div>
-                </div>
-
-                <br/>
-                <!-- M-CAP paper-->
-                <div class='row'>
-                    <div class='col-xs-4'>
-                        <img src="{{ "/assets/img/mcap.png" | prepend: site.baseurl }}" class='paper-image'>
-                    </div>
-                    <div class='col-xs-8'>
-                        <div class='paper-title'>
-                            M-CAP eliminates majority of variants of uncertain significance in clinical
-                            exomes at 95% sensitivity
-                        </div>
-                        <br/>
-                        <div>
-                            Karthik A. Jagadeesh*, Aaron M. Wenger*, <b>Mark J. Berger</b>, Harendra Guturu,
-                            Peter D. Stenson, David N. Cooper, Jonathan A. Bernstein, Gill Bejerano
-                        </div>
-                        <div>
-                            <i>Nature Genetics</i>
-                        </div>
-                        <div>
-                            <a href="http://rdcu.be/lPtd">[pdf]</a>
-                            <a href="http://bejerano.stanford.edu/MCAP/">[project page]</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class='row'>
-                    <hr>
-                </div>
-
-                <div class='row'>
-                    <h1>Research Experience</h1>
-                </div>
-
-                <div class='row'>
-                    <div class='col-xs-4'>
-                        <img src="{{ "/assets/img/curtis.jpg" | prepend: site.baseurl }}" class='paper-image'>
-                    </div>
-                    <div class='col-xs-8'>
-                        <div class='paper-title'>
-                            Curtis Lab, April 2016 - September 2016
-                        </div>
-                        <br/>
-                        <p>
-                            In the Curtis Lab, I studied a subtype of breast cancer using next-generation
-                            sequencing technologies. This included a wide variety of methods, such as
-                            whole-genome sequencing, copy number assays, and RNA-seq.
-                        </p>
-                    </div>
-                </div>
-
-                <div class='row'>
-                    <div class='col-xs-4'>
-                        <img src="{{ "/assets/img/bejerano.png" | prepend: site.baseurl }}" class='paper-image'>
-                    </div>
-                    <div class='col-xs-8'>
-                        <div class='paper-title'>
-                            Bejerano Lab, April 2015 - June 2016
-                        </div>
-                        <br/>
-                        <p>
-                            In the Bejerano Lab, I worked on tools which help research scientists and clinical geneticists
-                            diagnose patients with rare genetic diseases. Oftentimes, doctors cannot properly diagnose
-                            a child with rare genetic defects. Therefore, the doctor will sequence the protein-coding portion
-                            of the child's DNA to see if the patient harbors any known disease-causing mutations.
-                            If the child does not carry a known disease-causing mutation, the clinician must examine
-                            a list of 300 to 500 variants which might be causing the disease. During my time in the
-                            Bejerano Lab, I worked on tools which help to reduce this list of uncertain variants.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </body>
-</html>
+<!-- Pagination links -->
+{% if paginator.total_pages > 1 %}
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-button pagination-active" href="{{ site.github.url }}{{ paginator.next_page_path }}" class="next">Older</a>
+  {% else %}
+    <span class="pagination-button">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    <a class="pagination-button pagination-active" href="{{ site.baseurl }}{{ paginator.previous_page_path }}">Newer</a>
+  {% else %}
+    <span class="pagination-button">Newer</span>
+  {% endif %}
+</div>
+{% endif %}
