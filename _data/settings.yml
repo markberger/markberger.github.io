@@ -1,5 +1,5 @@
 title:  Mark J. Berger
-tagline:  
+tagline:
 
 # Authors documented under _data
 
@@ -21,4 +21,4 @@ social:
 - {icon: 'github', link: 'https://www.github.com/markberger'}
 - {icon: 'twitter', link: 'https://twitter.com/mjberger_'}
 - {icon: 'linkedin', link: 'https://www.linkedin.com/in/markjberger/'}
-- {icon: 'rss-square', link: 'feed.xml'}
+- {icon: 'rss-square', link: '/feed.xml'}
