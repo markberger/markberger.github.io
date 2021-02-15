@@ -5,27 +5,36 @@ title: About
 
 <img src="{{ "/assets/img/me.jpg" | absolute_url }}" style="width: 40%; margin: auto; display: block;" />
 
-I am a software engineer at [Color](https://www.color.com/) on the data platform team. My interests include a variety of topics at the intersection of software engineering, computer science, and biology.
+I am a software engineer at [Robinhood](https://robinhood.com/) on the security team.
+Previously, I worked on the data science team at [Color](https://color.com). My interests
+include a variety of topics at the intersection of software engineering, computer science,
+and biology.
 
-Previously, I did a short stint in the Stanford PhD program where I published a [few papers](https://scholar.google.com/citations?user=0P0fVwQAAAAJ&hl=en) on rare genetic variation, gene regulation, and the heritability of complex traits. While I was lucky to work with excellent mentors and peers, I decided academia is not for me and left with a masters in March of 2019.
+Before I worked as a software engineer, I did a short stint in the Stanford PhD program
+where I published a [few papers](https://scholar.google.com/citations?user=0P0fVwQAAAAJ&hl=en)
+on rare genetic variation, gene regulation, and the heritability of complex traits. While
+I was lucky to work with excellent mentors and peers, I decided academia is not for me
+and left with a masters in March of 2019.
 
 <br/>
 
 # Experience
 
-### Color Genomics (May 2019 - present)
+### Robinhood (September 2020 - present)
+
+### Color Genomics (May 2019 - August 2020)
 
 ### Stanford Computer Science PhD Program (Sept 2017 - March 2019)
 
-### Bejerano Laboratory, Stanford University (Sept 2016 - Sept 2017)
+### Bejerano Laboratory, Stanford University (September 2016 - September 2017)
 
-### Curtis Laboratory, Stanford University (April 2016 - Sept 2016)
+### Curtis Laboratory, Stanford University (April 2016 - September 2016)
 
-### Facebook (June 2014 - Sept 2014)
+### Facebook (June 2014 - September 2014)
 
 ### Yahoo! Research - Latin America (April 2014 - June 2014)
 
-### Google Summer of Code Student (May 2013 - Sept 2013)
+### Google Summer of Code Student (May 2013 - September 2013)
 
 <br/>
 # Education
