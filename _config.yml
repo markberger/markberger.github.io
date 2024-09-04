@@ -22,7 +22,7 @@ plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-t
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
 title:		           "Mark J. Berger's Blog"
 author:              "Mark J. Berger"
-url: https://markjberger.com
+url: https://www.markjberger.com
 permalink: /:title/
 
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
