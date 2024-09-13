@@ -65,20 +65,18 @@ blockquote {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 615px;
+  width: 40vw;
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1280px) {
   .container {
-    width: 45vw;
+    width: 90vw;
   }
 }
 
-/*48em*/
-
-@media (max-width: 768px) {
+@media (min-width: 1280px) and (max-width: 1680px) {
   .container {
-    width: 90vw;
+    width: 60vw;
   }
 }
 
