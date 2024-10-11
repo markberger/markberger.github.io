@@ -31,3 +31,4 @@ gem 'jekyll-seo-tag'
 gem "webrick", "~> 1.8"
 
 gem "kramdown-parser-gfm", "~> 1.1"
+gem "jekyll-redirect-from"
