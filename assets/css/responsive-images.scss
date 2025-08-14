@@ -1,0 +1,151 @@
+---
+---
+
+/*
+  Enhanced Responsive Image Styles
+  Add this to your main.scss or import it
+*/
+
+/* Base responsive image styles */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsive image container */
+.responsive-img-container {
+  position: relative;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.responsive-img-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Post header images */
+.post-header-image {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  display: block;
+}
+
+/* Thumbnail improvements */
+.thumbnail-container {
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  /* Remove problematic negative margins */
+  position: relative;
+  aspect-ratio: 16/9; /* Consistent aspect ratio */
+}
+
+.thumbnail-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Remove negative margins that cause layout issues */
+  margin: 0;
+  transition: transform 0.3s ease;
+}
+
+.thumbnail-container:hover img {
+  transform: scale(1.05);
+}
+
+/* Inline images in content */
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem auto;
+  display: block;
+}
+
+/* Small images (like mobile screenshots) */
+.img-small {
+  max-width: 300px;
+  width: 100%;
+}
+
+.img-medium {
+  max-width: 500px;
+  width: 100%;
+}
+
+.img-large {
+  max-width: 800px;
+  width: 100%;
+}
+
+/* Image with caption */
+.img-with-caption {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.img-with-caption img {
+  margin-bottom: 0.5rem;
+}
+
+.img-caption {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+/* Responsive breakpoints for images */
+@media (max-width: 480px) {
+  .post-header-image,
+  .img-large {
+    margin: 1rem 0;
+  }
+  
+  .img-small {
+    max-width: 250px;
+  }
+  
+  .thumbnail-container {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .img-small {
+    max-width: 280px;
+  }
+  
+  .img-medium {
+    max-width: 450px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .img-small {
+    max-width: 300px;
+  }
+  
+  .img-medium {
+    max-width: 500px;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Styles for high DPI displays if needed */
+}
+
+/* Print styles */
+@media print {
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+}

@@ -2,6 +2,7 @@
 layout: post
 title: "MITM Yourself: Inspecting iOS HTTPS traffic"
 date: 2024-09-30 08:00:00.000000000 -07:00
+image: 2024-09-30/mitmproxy-blank.png
 ---
 
 _See the [rh-cc-exporter](https://github.com/markberger/rh-cc-exporter/) Github
@@ -10,7 +11,7 @@ repo for all code mentioned in this post._
 Robinhood recently launched a [credit card](https://robinhood.com/creditcard/)
 offering 3% cash back on all purchases. While the
 [app](https://apps.apple.com/us/app/robinhood-credit-card/id6462308655) is
-fantastic, it has one major drawback: I can’t download my transactions as a CSV
+fantastic, it has one major drawback: I can't download my transactions as a CSV
 or Quicken file. If this were a website, I could easily use Chrome DevTools to
 inspect the HTTP requests and replay them in a Python script. Unfortunately
 there is no web portal for the card - all I have is the app. So how can we
@@ -38,9 +39,10 @@ mitmproxy
 
 You should see a blank screen like this:
 
-{:refdef: style="text-align: center;"}
-![mitmproxy running with no requests](/assets/img/2024-09-30/mitmproxy-blank.png)
-{:refdef}
+<div class="img-with-caption">
+  <img src="/assets/img/2024-09-30/mitmproxy-blank.png" alt="mitmproxy running with no requests" class="img-large">
+  <div class="img-caption">mitmproxy running with no requests</div>
+</div>
 
 Now run `ifconfig` to determine the machine's IP address. This is usually listed
 under `en0` or `eth0`. With this information, we can point our iPhone at the
@@ -49,21 +51,19 @@ click the blue info circle next to the current WiFi connection. Scroll all the
 way to the bottom and click "Configure Proxy". Select "Manual" and then input
 the IP address with port 8080.
 
-<!-- prettier-ignore-start -->
-{:refdef: style="text-align: center;"}
-![iOS manual proxy config](/assets/img/2024-09-30/iOS-proxy-config.png){:width="260px"}
-{:refdef}
-<!-- prettier-ignore-end -->
+<div class="img-with-caption">
+  <img src="/assets/img/2024-09-30/iOS-proxy-config.png" alt="iOS manual proxy config" class="img-small">
+  <div class="img-caption">iOS manual proxy configuration</div>
+</div>
 
 The traffic we're interested in is likely HTTPS, so we need to complete one more
 step by trusting the mitmproxy CA. Navigate to [mitm.it](http://mitm.it) on your
 iPhone and you should see the following page:
 
-<!-- prettier-ignore-start -->
-{:refdef: style="text-align: center;"}
-![iOS web page with mitm cert for download](/assets/img/2024-09-30/iOS-mitm-cert-page.jpeg){:width="260px"}
-{:refdef}
-<!-- prettier-ignore-end -->
+<div class="img-with-caption">
+  <img src="/assets/img/2024-09-30/iOS-mitm-cert-page.jpeg" alt="iOS web page with mitm cert for download" class="img-small">
+  <div class="img-caption">iOS web page with mitm cert for download</div>
+</div>
 
 After downloading the file, we must install it and enable full trust. Go back to
 Settings > General > VPN & Device Management > mitmproxy. Click "install" in the
@@ -75,9 +75,10 @@ If everything is working correctly, mitmproxy will start to show network
 requests from your iPhone. Here is what my console looks like from installing
 the mitmproxy CA and opening the credit card app:
 
-{:refdef: style="text-align: center;"}
-![mitmproxy running with requests](/assets/img/2024-09-30/mitmproxy-with-requests.png)
-{:refdef}
+<div class="img-with-caption">
+  <img src="/assets/img/2024-09-30/mitmproxy-with-requests.png" alt="mitmproxy running with requests" class="img-large">
+  <div class="img-caption">mitmproxy running with requests</div>
+</div>
 
 At this point, we can see we are working with a [GraphQL](https://graphql.org/)
 API. Explore this interface for a bit, and you will eventually find the request
