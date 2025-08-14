@@ -96,7 +96,7 @@ x-x1-client:      mobile-app-rh@1.35.0
 
 And the GraphQL query:
 
-```
+```sh
 {
   "query": "...",
   "operationName": "TransactionListQuery",
@@ -181,7 +181,7 @@ dataclass. This class can then be used to output any file format. Here, I used
 the [Quiffen](https://github.com/isaacharrisholt/quiffen) package to generate a
 QIF file:
 
-```python
+```py
 from dataclasses import dataclass
 from datetime import datetime
 from decimal import Decimal
